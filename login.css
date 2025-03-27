@@ -79,31 +79,40 @@
   
   .tabs-list {
     display: flex;
-    border-bottom: 1px solid var(--gray-200);
+    gap: 1rem;
     margin-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-200);
   }
   
   .tab-trigger {
-    padding: 1rem;
-    flex: 1;
-    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-600);
     cursor: pointer;
-    color: var(--gray-500);
-    transition: all 0.3s;
     border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .tab-trigger:hover {
+    color: var(--blood-500);
   }
   
   .tab-trigger.active {
-    color: var(--blood-600);
-    border-bottom-color: var(--blood-600);
+    color: var(--blood-500);
+    border-bottom-color: var(--blood-500);
   }
   
   .tab-content {
     display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
   .tab-content.active {
     display: block;
+    opacity: 1;
   }
   
   .form {
@@ -122,6 +131,17 @@
     transform: translateY(-50%);
     color: var(--gray-400);
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .form-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1.5;
   }
   
   .form-input {
@@ -187,23 +207,24 @@
   
   .form-switch {
     text-align: center;
-    color: var(--gray-600);
+    margin-top: 1.5rem;
     font-size: 0.875rem;
+    color: var(--gray-600);
   }
   
   .form-switch-link {
-    color: var(--blood-600);
-    margin-left: 0.5rem;
-    border: none;
     background: none;
-    cursor: pointer;
-    font-size: 0.875rem;
+    border: none;
+    color: var(--blood-500);
     font-weight: 500;
-    transition: color 0.3s;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.25rem;
+    transition: color 0.2s ease;
   }
   
   .form-switch-link:hover {
-    color: var(--blood-700);
+    color: var(--blood-600);
   }
   
   @media (min-width: 1024px) {

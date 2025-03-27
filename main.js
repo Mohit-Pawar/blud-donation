@@ -132,14 +132,78 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(element);
     });
   
+    // Tab switching functionality
+    const tabTriggers = document.querySelectorAll('.tab-trigger');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function switchTab(tabId) {
+      // Remove active class from all triggers and contents
+      tabTriggers.forEach(t => t.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      
+      // Add active class to selected trigger and content
+      const selectedTrigger = document.querySelector(`.tab-trigger[data-tab="${tabId}"]`);
+      const selectedContent = document.getElementById(`${tabId}-tab`);
+      
+      if (selectedTrigger && selectedContent) {
+        selectedTrigger.classList.add('active');
+        selectedContent.classList.add('active');
+      }
+    }
+
+    // Add click handlers to tab triggers
+    tabTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const tabId = trigger.getAttribute('data-tab');
+        switchTab(tabId);
+      });
+    });
+
+    // Form switch links
+    const formSwitchLinks = document.querySelectorAll('.form-switch-link');
+    formSwitchLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tabId = link.getAttribute('data-tab');
+        switchTab(tabId);
+      });
+    });
+
     // Login form submission
-    const loginForm = document.getElementById('login-form');
+    const loginForm = document.getElementById('loginForm');
     if (loginForm) {
       loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('Login form submitted');
-        // Add login logic here
+        
+        // Get form data
+        const formData = new FormData(loginForm);
+        const formDataObj = {};
+        formData.forEach((value, key) => {
+          formDataObj[key] = value;
+        });
+        
+        // In a real application, you would send the form data to a server here
+        console.log('Login form submitted:', formDataObj);
         alert('Login functionality would be implemented here in a real application.');
+      });
+    }
+
+    // Signup form submission
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+      signupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(signupForm);
+        const formDataObj = {};
+        formData.forEach((value, key) => {
+          formDataObj[key] = value;
+        });
+        
+        // In a real application, you would send the form data to a server here
+        console.log('Signup form submitted:', formDataObj);
+        alert('Signup functionality would be implemented here in a real application.');
       });
     }
   
