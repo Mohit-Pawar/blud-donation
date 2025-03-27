@@ -1,0 +1,222 @@
+.donate {
+    padding: 5rem 0;
+    background-color: white;
+  }
+  
+  .donate-heading {
+    text-align: center;
+    max-width: 48rem;
+    margin: 0 auto 4rem auto;
+  }
+  
+  .donate-badge {
+    display: inline-block;
+    background-color: var(--blood-50);
+    color: var(--blood-700);
+    padding: 0.375rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .donate-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray-900);
+  }
+  
+  .donate-description {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+  }
+  
+  .donate-card {
+    max-width: 64rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .donate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .donate-info {
+    padding: 2rem;
+    background-color: var(--blood-600);
+    color: white;
+  }
+  
+  .donate-info-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: var(--blood-600);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .step-content p {
+    color: var(--blood-100);
+  }
+  
+  .donate-info-footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .info-footer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .info-footer-item svg {
+    margin-right: 0.5rem;
+  }
+  
+  .donate-form {
+    padding: 2rem;
+  }
+  
+  .donate-form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    background-color: var(--gray-50);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--blood-300);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }
+  
+  .form-textarea {
+    resize: none;
+    min-height: 6rem;
+  }
+  
+  .form-button {
+    margin-top: 1rem;
+  }
+  
+  .success-message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .success-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECFDF5;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+  
+  .success-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #10B981;
+  }
+  
+  .success-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-description {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .form-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .donate-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

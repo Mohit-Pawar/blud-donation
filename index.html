@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeFlow - Blood Donation</title>
+    <meta name="description" content="Join the LifeFlow community and donate blood to save lives" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./hero.css">
+    <link rel="stylesheet" href="./why-donate.css">
+    <link rel="stylesheet" href="./impact.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./donate.css">
+    <link rel="stylesheet" href="./footer.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <a href="#" class="navbar-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            <span class="navbar-logo-text">LifeFlow</span>
+          </a>
+          
+          <!-- Desktop Menu -->
+          <div class="navbar-desktop">
+            <a href="#why-donate" class="navbar-link">Why Donate</a>
+            <a href="#impact" class="navbar-link">Impact</a>
+            <a href="#donate" class="navbar-link">Give Blood</a>
+            <a href="#login" class="navbar-link">Login</a>
+          </div>
+          
+          <!-- Mobile Menu Toggle -->
+          <button class="navbar-toggle" id="mobile-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menu-icon">
+              <line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden" id="close-icon">
+              <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="navbar-mobile hidden" id="mobile-menu">
+          <div class="container navbar-mobile-menu">
+            <a href="#why-donate" class="navbar-mobile-link">Why Donate</a>
+            <a href="#impact" class="navbar-mobile-link">Impact</a>
+            <a href="#donate" class="navbar-mobile-link">Give Blood</a>
+            <a href="#login" class="navbar-mobile-link">Login</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="hero-title-accent">Donate Blood,</span> 
+              Save Lives
+            </h1>
+            <p class="hero-description">
+              Join thousands of donors making a difference in their communities. 
+              Your donation can save up to three lives.
+            </p>
+            <div class="hero-buttons">
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Blood donation" class="hero-img">
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Donate Section -->
+      <section id="why-donate" class="why-donate">
+        <div class="container fade-in-section">
+          <div class="why-donate-heading">
+            <span class="why-donate-badge">
+              Make A Difference
+            </span>
+            <h2 class="why-donate-title">
+              Why Your Donation Matters
+            </h2>
+            <p class="why-donate-description">
+              Blood donation is a critical lifeline for millions of people every year. 
+              Your selfless act can have a profound impact on countless lives.
+            </p>
+          </div>
+          
+          <div class="benefits-grid">
+            <div class="benefit-card fade-in-section">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                </svg>
+              </div>
+              <h3 class="benefit-title">Save Lives</h3>
+              <p class="benefit-description">One donation can save up to three lives. Blood transfusions help accident victims, surgery patients, and those fighting cancer.</p>
+            </div>
+            
+            <div class="benefit-card fade-in-section">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <h3 class="benefit-title">Quick Process</h3>
+              <p class="benefit-description">The donation process takes about an hour from start to finish, with the actual donation only taking 8-10 minutes.</p>
+            </div>
+            
+            <div class="benefit-card fade-in-section">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3 class="benefit-title">Community Impact</h3>
+              <p class="benefit-description">Your donation directly helps people in your community. Blood cannot be manufactured—it must come from generous donors.</p>
+            </div>
+            
+            <div class="benefit-card fade-in-section">
+              <div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6" /><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                </svg>
+              </div>
+              <h3 class="benefit-title">Health Benefits</h3>
+              <p class="benefit-description">Regular blood donation is linked to reduced risk of heart attack, lower cholesterol levels, and free health check-ups.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Section -->
+      <section id="impact" class="impact-section">
+        <div class="container impact-container fade-in-section">
+          <div class="impact-header">
+            <span class="impact-badge">Real Impact</span>
+            <h2 class="impact-title">The Difference Your Donation Makes</h2>
+            <p class="impact-description">
+              Every donation has a profound impact on patients and their families. Here's how your contribution helps save lives across the country.
+            </p>
+          </div>
+          
+          <div class="stats-grid">
+            <div class="stat-card fade-in-section">
+              <div class="stat-number">4.5M</div>
+              <div class="stat-label">People need blood yearly</div>
+            </div>
+            
+            <div class="stat-card fade-in-section">
+              <div class="stat-number">43,000</div>
+              <div class="stat-label">Pints donated daily</div>
+            </div>
+            
+            <div class="stat-card fade-in-section">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Lives saved per donation</div>
+            </div>
+            
+            <div class="stat-card fade-in-section">
+              <div class="stat-number">1%</div>
+              <div class="stat-label">Of population donates</div>
+            </div>
+          </div>
+          
+          <div class="testimonials-container">
+            <div class="testimonial fade-in-section">
+              <div class="testimonial-content">
+                <div class="testimonial-quote">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" /><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+                  </svg>
+                </div>
+                <p class="testimonial-text">
+                  "After my accident, I needed multiple blood transfusions that saved my life. I'm forever grateful to the donors who made my recovery possible."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-name">Sarah Johnson</div>
+                  <div class="author-title">Transfusion Recipient</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial fade-in-section">
+              <div class="testimonial-content">
+                <div class="testimonial-quote">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" /><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+                  </svg>
+                </div>
+                <p class="testimonial-text">
+                  "I donate blood every 56 days. It's a small gesture that makes a huge difference. Knowing I'm helping others is the best feeling in the world."
+                </p>
+                <div class="testimonial-author">
+                  <div class="author-name">Michael Rodriguez</div>
+                  <div class="author-title">Regular Donor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login Section -->
+      <section id="login" class="login-section">
+        <div class="container login-container fade-in-section">
+          <div class="login-grid">
+            <div class="login-content">
+              <span class="login-badge">
+                Join Our Community
+              </span>
+              <h2 class="login-title">
+                Connect With Us and Start Saving Lives
+              </h2>
+              <p class="login-description">
+                Create an account to track your donations, schedule appointments, and join our community of life-savers. Already a member? Sign in to continue your journey.
+              </p>
+              
+              <ul class="benefits-list">
+                <li class="benefit-item">
+                  <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m5 11 4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p>Schedule donation appointments at your convenience</p>
+                </li>
+                <li class="benefit-item">
+                  <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m5 11 4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p>View your donation history and health metrics</p>
+                </li>
+                <li class="benefit-item">
+                  <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m5 11 4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p>Receive notifications for urgent donation needs</p>
+                </li>
+                <li class="benefit-item">
+                  <div class="benefit-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m5 11 4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p>Access educational resources about blood donation</p>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="login-form-container">
+              <div class="tabs">
+                <div class="tabs-list">
+                  <div class="tab-trigger active" data-tab="login">Log In</div>
+                </div>
+                
+                <div class="tab-content active" id="login-tab">
+                  <form class="form" id="login-form">
+                    <div class="form-group">
+                      <div class="form-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                      </div>
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        class="form-input"
+                        required
+                      />
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="form-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                      </div>
+                      <input
+                        type="password"
+                        placeholder="Password"
+                        class="form-input"
+                        required
+                      />
+                      <div class="form-footer">
+                        <a href="#" class="form-link">
+                          Forgot password?
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-button">
+                      Log In
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donate Section -->
+      <section id="donate" class="donate">
+        <div class="container fade-in-section">
+          <div class="donate-heading">
+            <span class="donate-badge">
+              Take Action Today
+            </span>
+            <h2 class="donate-title">
+              Schedule Your Donation
+            </h2>
+            <p class="donate-description">
+              Your blood donation journey starts here. Fill out the form below to schedule an appointment at a donation center near you.
+            </p>
+          </div>
+          
+          <div class="donate-card">
+            <div class="donate-grid">
+              <div class="donate-info">
+                <h3 class="donate-info-title">How It Works</h3>
+                <div class="steps-list">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                      <h4>Schedule</h4>
+                      <p>Book your appointment online or call your local center.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                      <h4>Pre-Donation</h4>
+                      <p>Get a good night's sleep, eat well, and stay hydrated.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                      <h4>Donation</h4>
+                      <p>The actual blood donation takes only 8-10 minutes.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                      <h4>Recovery</h4>
+                      <p>Enjoy refreshments while resting for 10-15 minutes.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="donate-info-footer">
+                  <div class="info-footer-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <span>You must be at least 17 years old and weigh at least 49 Kgs.</span>
+                  </div>
+                  <div class="info-footer-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <span>Bring a valid ID and a list of medications you're taking.</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="donate-form" id="donateFormContainer">
+                <form id="donateForm">
+                  <h3 class="donate-form-title">Schedule Your Appointment</h3>
+                  <div class="form-grid">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-input" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-input" required>
+                      </div>
+                    </div>
+                    
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-input" required>
+                      </div>
+                    </div>
+                    
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label class="form-label">Preferred Date</label>
+                        <input type="date" class="form-input" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Preferred Time</label>
+                        <select class="form-select" required>
+                          <option value="" disabled selected>Select time</option>
+                          <option value="morning">Morning (9AM - 12PM)</option>
+                          <option value="afternoon">Afternoon (12PM - 3PM)</option>
+                          <option value="evening">Evening (3PM - 6PM)</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label">Blood Type (if known)</label>
+                      <select class="form-select">
+                        <option value="" disabled selected>Select blood type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="unknown">I don't know</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label">Previous Donor?</label>
+                      <select class="form-select" required>
+                        <option value="" disabled selected>Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label">Any Questions or Notes?</label>
+                      <textarea class="form-textarea"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-button">Schedule Appointment</button>
+                  </div>
+                </form>
+              </div>
+              
+              <div class="success-message hidden" id="successMessage">
+                <div class="success-icon-container">
+                  <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <h3 class="success-title">Appointment Scheduled!</h3>
+                <p class="success-description">Thank you for scheduling your donation. We've sent a confirmation email with all the details.</p>
+                <button class="btn btn-primary" id="newAppointmentButton">Schedule Another</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-column">
+              <div class="footer-about">
+                <div class="footer-logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                  </svg>
+                  <span class="footer-logo-text">LifeFlow</span>
+                </div>
+                <p class="footer-description">
+                  LifeFlow connects blood donors with those in need, creating a vital lifeline that saves lives every day.
+                </p>
+              </div>
+              
+              <div class="footer-social">
+                <a href="#" class="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </a>
+                <a href="#" class="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+                <a href="#" class="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z" />
+                  </svg>
+                </a>
+                <a href="#" class="footer-social-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-column-title">Quick Links</h3>
+              <div class="footer-links">
+                <a href="#why-donate" class="footer-link">Why Donate</a>
+                <a href="#impact" class="footer-link">Our Impact</a>
+                <a href="#donate" class="footer-link">Give Blood</a>
+                <a href="#login" class="footer-link">Login / Register</a>
+                <a href="https://mdacs.org.in/pdfs/List%20of%20Blood%20Banks%20in%20Mumbai%20with%20contact%20details.pdf" class="footer-link">Find Centers</a>
+              </div>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-column-title">Resources</h3>
+              <div class="footer-links">
+                <a href="https://www.ijnrd.org/papers/IJNRD2405119.pdf" class="footer-link">Donation Process</a>
+                <a href="https://economictimes.indiatimes.com/news/how-to/blood-donation-who-can-donate-who-cant-and-what-are-the-rules-for-blood-donation/articleshow/100983529.cms" class="footer-link">Eligibility Requirements</a>
+                <a href="#" class="footer-link">FAQs</a>
+                <a href="https://www.redcrossblood.org/donate-blood/blood-types.html" class="footer-link">Blood Types</a>
+                <a href="https://en.wikipedia.org/wiki/Blood_type" class="footer-link">Educational Resources</a>
+              </div>
+            </div>
+            
+            <div class="footer-column">
+              <h3 class="footer-column-title">Contact Us</h3>
+              <div class="footer-contact">
+                <div class="footer-contact-item">
+                  <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" />
+                  </svg>
+                  <span>blud-donation@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                  <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>112</span>
+                </div>
+                <div class="footer-contact-item">
+                  <svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>Datta Meghe College of Engineering<br>Airoli, Navi Mumbai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <p>&copy; 2023 LifeFlow. All rights reserved.</p>
+            <div class="footer-bottom-links">
+              <a href="#" class="footer-bottom-link">Privacy Policy</a>
+              <a href="#" class="footer-bottom-link">Terms of Service</a>
+              <a href="#" class="footer-bottom-link">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      
+      document.querySelectorAll('.fade-in-section').forEach(element => {
+        element.classList.add('is-visible');
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
